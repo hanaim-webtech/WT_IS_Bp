@@ -24,7 +24,7 @@ Zie: [_Cloning a repository using the command line_](https://help.github.com/en/
 ### 2. Visual Studio Code: open de workspace
 
 Open het bestand [`/webapplicatie.code-workspace`](/webapplicatie.code-workspace) als workspace.
-Zie: [Handleiding Visual Studio Code: 'Opening workspace files'](https://code.visualstudio.com/docs/editor/multi-root-workspaces#_opening-workspace-files).
+Zie: [_Opening workspace files_](https://code.visualstudio.com/docs/editor/multi-root-workspaces#_opening-workspace-files).
 
 ### 3. Visual Studio Code: open een nieuw venster **voor SQL Server 2019**
 
@@ -69,6 +69,6 @@ In de huidige versie van dit template moet je even wachten tot de databasebackup
 
 ### Hoe kan ik dingen uitproberen en uitzoeken aan de database buiten PHP om?
 
-In de dev container [rdbms](/rdbms/) staat de [SQL Server extensie voor Visual Studio Code](https://docs.microsoft.com/en-us/sql/visual-studio-code/sql-server-develop-use-vscode?view=sql-server-ver15) standaard geïnstalleerd.
+In de dev container [rdbms](/rdbms/) staat de [SQL Server-extensie voor Visual Studio Code](https://docs.microsoft.com/en-us/sql/visual-studio-code/sql-server-develop-use-vscode?view=sql-server-ver15) standaard geïnstalleerd.
 
 Gebruikt https://www.php.net/manual/en/features.commandline.webserver.php
