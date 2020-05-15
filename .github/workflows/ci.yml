@@ -23,4 +23,7 @@ jobs:
       - uses: actions/checkout@v1
       - name: Test webserver container
         working-directory: ${{ github.workspace }}/webserver
-        run: timeout --preserve-status 4m docker-compose up --abort-on-container-exit
+        run: |
+          # Maak netwerk aan. Dit is specifiek voor CI, aangezien de jobs niet  opeenvolgend lopen. Deze container als tweede starten is wel de bedoeling o.b.v. de README.
+          docker network create webapplicatie
+          timeout --preserve-status 4m docker-compose up --abort-on-container-exit
