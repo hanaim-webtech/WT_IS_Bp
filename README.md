@@ -32,7 +32,7 @@ Via de menubalk bovenaan: _File_ > _New Window_.
 
 N.B.: Dit venster is en blijft specifiek om te ontwikkelen aan of te werken met SQL Server 2019.
 
-### 4. Browser: Download de database dump
+### 4. Browser: download de database dump
 
 Download de [Adventure Works 2017](https://docs.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver15) database dump vanaf https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2017.bak naar de huidige map `rdbms/`. Sla het bestand op onder de naam `AdventureWorks2017.bak`.
 
