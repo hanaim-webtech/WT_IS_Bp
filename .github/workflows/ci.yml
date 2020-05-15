@@ -7,7 +7,9 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Describe environment
-        run: docker --version && docker-compose --version
+        run: |
+          docker --version
+          docker-compose --version
       - name: Test rdbms container
         working-directory: ${{ github.workspace }}/rdbms
         run: timeout --preserve-status 2m docker-compose up --abort-on-container-exit
