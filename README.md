@@ -69,6 +69,6 @@ In de huidige versie van dit template moet je even wachten tot de databasebackup
 
 ### Hoe kan ik dingen uitproberen en uitzoeken aan de database buiten PHP om?
 
-In de dev container [rdbms](/rdbms/) staat de [SQL Server-extensie voor Visual Studio Code](https://docs.microsoft.com/en-us/sql/visual-studio-code/sql-server-develop-use-vscode?view=sql-server-ver15) standaard geïnstalleerd.
+In de dev container [SQL Server 2019](/rdbms/) staat de [SQL Server-extensie voor Visual Studio Code](https://docs.microsoft.com/en-us/sql/visual-studio-code/sql-server-develop-use-vscode?view=sql-server-ver15) standaard geïnstalleerd.
 
 Gebruikt https://www.php.net/manual/en/features.commandline.webserver.php
