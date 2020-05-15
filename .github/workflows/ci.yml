@@ -1,0 +1,14 @@
+name: CI/CD pipeline
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Test rdbms container
+        working-directory: ${{ github.workspace }}/rdbms
+        run: timeout 5m --preserve-status docker-compose up --abort-on-container-exit
+      - name: Test webserver container
+        working-directory: ${{ github.workspace }}/rdbms
+        run: timeout 5m --preserve-status docker-compose up --abort-on-container-exit
