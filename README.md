@@ -57,7 +57,7 @@ Via de menubalk bovenaan: _File_ > _Open..._. Selecteer de map `webserver`, dus 
 
 ### 9. Visual Studio Code: activeer de dev container voor PHP
 
-Neem ook hier de inleidende opmerking serieus bij stap 5 (_... activeer de dev container voor SQL Server 2019_).
+Neem ook hier de inleidende opmerking serieus bij de eerdere stap _... activeer de dev container voor SQL Server 2019_.
 
 Op een gegeven moment krijg je de vraag of je de dev container binnen deze map wilt activeren. Reageer met _Yes_.
 
