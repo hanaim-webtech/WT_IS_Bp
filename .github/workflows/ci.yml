@@ -12,5 +12,5 @@ jobs:
         working-directory: ${{ github.workspace }}/rdbms
         run: timeout --preserve-status 2m docker-compose up --abort-on-container-exit
       - name: Test webserver container
-        working-directory: ${{ github.workspace }}/rdbms
+        working-directory: ${{ github.workspace }}/webserver
         run: timeout --preserve-status 5m docker-compose up --abort-on-container-exit
