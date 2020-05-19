@@ -16,7 +16,7 @@ error_reporting(E_ALL);
 </head>
 
 <body>
-<?php phpinfo();?>
+<?php phpinfo()?>
 </body>
 
 </html>
