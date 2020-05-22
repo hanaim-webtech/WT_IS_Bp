@@ -1,12 +1,19 @@
 name: CI/CD pipeline
-on: [push]
+on:
+  push:
+    branches:
+      - "**"
+      # Sluit de default branch uit, aangezien (1) die op GitHub protected is en (2) alle merges daarheen de pipeline al doorlopen hebben (nl. bij pushes naar PR branches).
+      - "!master"
+    paths-ignore:
+      - "**.md"
 
 jobs:
   describe_environment:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v1
-      - name: Describe environment
+      - name: Beschrijf omgeving
         run: |
           docker --version
           docker-compose --version
@@ -14,14 +21,14 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v1
-      - name: Test rdbms container
+      - name: Test rdbms-container
         working-directory: ${{ github.workspace }}/rdbms
         run: timeout --preserve-status 2m docker-compose up --abort-on-container-exit
   test_webserver_container:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v1
-      - name: Test webserver container
+      - name: Test webserver-container
         working-directory: ${{ github.workspace }}/webserver
         run: |
           # Maak netwerk aan. Dit is specifiek voor CI, aangezien de jobs niet  opeenvolgend lopen. Deze container als tweede starten is wel de bedoeling o.b.v. de README.
