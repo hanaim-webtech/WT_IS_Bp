@@ -1,4 +1,4 @@
-name: CI/CD pipeline
+name: Leesbaarheidscontrole
 on:
     push:
         branches:
