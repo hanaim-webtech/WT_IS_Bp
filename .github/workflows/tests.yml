@@ -24,7 +24,9 @@ jobs:
             - uses: actions/checkout@v1
             - name: Test rdbms-container
               working-directory: ${{ github.workspace }}/rdbms
-              run: timeout --preserve-status 2m docker-compose up --abort-on-container-exit
+              run: |
+                  printf '%s\n' 'testpassword!Hallo-1244!' > ../password_rdbms_superuser.txt
+                  timeout --preserve-status 2m docker-compose up --abort-on-container-exit
     test_webserver_container:
         runs-on: ubuntu-18.04
         steps:
