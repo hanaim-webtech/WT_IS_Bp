@@ -34,4 +34,5 @@ jobs:
               run: |
                   # Maak netwerk aan. Dit is specifiek voor CI, aangezien de jobs niet  opeenvolgend lopen. Deze container als tweede starten is wel de bedoeling o.b.v. de README.
                   docker network create webapplicatie
-                  timeout --preserve-status 4m docker-compose up --abort-on-container-exit
+                  printf '%s\n' 'testpassword!Hallo-1244!' > ../password_rdbms_app.txt
+                  timeout --preserve-status 3m docker-compose up --abort-on-container-exit
