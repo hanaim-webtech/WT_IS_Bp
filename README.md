@@ -20,6 +20,8 @@ Voor een beginner zou dit eenmalig tien minuten kunnen duren. Vervolgens, als je
 
 -   Installeer [VS Code](https://code.visualstudio.com/).
 -   Installeer Docker. Dit project is getest met de variant [Docker Desktop](https://www.docker.com/products/docker-desktop).
+    -   Stel niet minder dan de standaardwaarde aan RAM-geheugen in: 2 GiB.
+    -   Houd verder rekening met ca. 5 GiB aan benodigde opslagruimte.
 
 ### 1. GitHub: Haal een kopie van dit project binnen
 
