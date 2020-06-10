@@ -31,10 +31,11 @@ Zie: [_Cloning a repository using the command line_](https://help.github.com/en/
 
 > Secrets, zoals database-wachtwoorden, worden in dit template veilig gebruikt. Om dat mogelijk te maken is wel een handeling van jou vereist.
 
-1. Maak in de hoofdmap van het project twee bestanden aan:
+1. Maak in de hoofdmap van het project twee bestanden aan met VS Code:
     - `password_rdbms_app.txt`
     - `password_rdbms_superuser.txt`
 1. Vul beide bestanden met [veilige wachtwoorden](https://docs.microsoft.com/nl-nl/sql/relational-databases/security/password-policy?view=sql-server-ver15).
+1. Eindig beide bestanden met een witregel.
 
 ### 3. VS Code: open een nieuw venster voor SQL Server 🛢️
 
