@@ -45,8 +45,8 @@ N.B.: Dit venster is en blijft specifiek om te ontwikkelen aan of te werken met 
 
 ### 4. VS Code: open de folder `rdbms` in het venster voor SQL Server 🛢️
 
-Via de menubalk bovenaan: _File_ > _Open..._.
-Select de map `rdbms`, dus niet een bestand erbinnen.
+Via de menubalk bovenaan: _File_ > _Open..._ (macOS) of _Open Folder_ (Windows).
+Selecteer de map `rdbms`, dus niet een bestand erbinnen.
 
 ### 5. VS Code: installeer de benodigde extensies
 
@@ -72,7 +72,8 @@ Via de menubalk bovenaan: _File_ > _New Window_.
 
 ### 8. VS Code: open de folder `webserver` in het venster voor PHP 📦
 
-Via de menubalk bovenaan: _File_ > _Open..._. Selecteer de map `webserver`, dus niet een bestand erbinnen.
+Via de menubalk bovenaan: _File_ > _Open..._ (macOS) of _Open Folder_ (Windows).
+Selecteer de map `webserver`, dus niet een bestand erbinnen.
 
 ### 9. VS Code: activeer de dev container voor PHP 📦
 
