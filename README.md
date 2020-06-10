@@ -42,18 +42,18 @@ Via de menubalk bovenaan: _File_ > _New Window_.
 
 N.B.: Dit venster is en blijft specifiek om te ontwikkelen aan of te werken met SQL Server.
 
-### 4. VS Code: installeer de benodigde extensies
+### 4. VS Code: open de folder `rdbms` in het venster voor SQL Server 🛢️
+
+Via de menubalk bovenaan: _File_ > _Open..._.
+Select de map `rdbms`, dus niet een bestand erbinnen.
+
+### 5. VS Code: installeer de benodigde extensies
 
 Op een gegeven moment krijg je mogelijk
 
 ![de vraag of je de door deze workspace aanbevolen extensies wilt installeren.](img/This_workspace_has_extension_recommendations.png)
 
 Reageer in dat geval met _Install All_.
-
-### 5. VS Code: open de folder `rdbms` in het venster voor SQL Server 🛢️
-
-Via de menubalk bovenaan: _File_ > _Open..._.
-Select de map `rdbms`, dus niet een bestand erbinnen.
 
 ### 6. VS Code: activeer de dev container voor SQL Server 🛢️
 
