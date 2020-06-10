@@ -68,6 +68,22 @@ Reageer met _Reopen in Container_.
 
 Wacht rustig af tot VS Code in de blauwe balk onderaan geen activiteit meer vertoont. Dit kan de eerste keer tot ca. vijf minuten duren, afhankelijk van hoe snel je internetverbinding en computer is.
 
+#### Bijzonderheden bij Windows
+
+Als je Windows gebruikt, kan je een aantal dialoogvensters krijgen.
+
+##### Sta Docker netwerkverkeer toe (Windows Firewall)
+
+![de vraag of je Docker netwerkverkeer wilt toestaan.](img/Windows_Security_Alert.png)
+Kies _Allow access_.
+
+De suggestie dat Docker op publieke netwerken actief zou mogen worden komt door [een bekende beperking in Docker](https://github.com/docker/for-win/issues/367).
+
+##### Geef de dev container toegang tot bestanden (Docker Desktop)
+
+![de vraag of je de dev container toegang wilt geven tot bestanden.](img/Docker_Desktop_-_Filesharing.png)
+Kies telkens _Share it_. Doe dit onmiddellijk, want als je te lang wacht kan het stappenplan mis gaan.
+
 ### 7. VS Code: open een nieuw venster voor PHP 📦
 
 Via de menubalk bovenaan: _File_ > _New Window_.
@@ -79,15 +95,11 @@ Selecteer de map `webserver`, dus niet een bestand erbinnen.
 
 ### 9. VS Code: activeer de dev container voor PHP 📦
 
-Op een gegeven moment krijg je
-
-![de vraag of je de dev container binnen deze map wilt activeren.](img/Folder_contains_a_dev_configuration_file_Reopen_folder_to_develop_in_a_container.png)
-
-Reageer met _Reopen in Container_.
-
-Wacht rustig af tot VS Code in de blauwe balk onderaan geen activiteit meer vertoont. Dit kan de eerste keer tot ca. vijf minuten duren, afhankelijk van hoe snel je internetverbinding en computer is.
+(Deze instructies zijn gelijk aan de vorige stap genaamd _VS Code: activeer de dev container ..._.)
 
 ### 10. Browser: bezoek nu [de website](http://127.0.0.1/over)
+
+Deze pagina werkt. Sommige andere pagina's, die RDBMS gebruiken, mogelijk niet. Daarvoor moet je eerst de stappen [Hoe kan ik de database vullen?](#hoe-kan-ik-de-database-vullen) uitvoeren.
 
 ## 🧑‍🏫 Stappenplan voor doorontwikkeling
 
