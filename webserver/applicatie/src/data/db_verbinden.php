@@ -1,6 +1,6 @@
 <?php
 
-declare (strict_types = 1);
+declare(strict_types = 1);
 
 namespace fletnix\data;
 
@@ -13,8 +13,7 @@ require_once ROOT_DIR . '/config/db.php';
 
 function verbindDb(string $databaseNaam, string $login, string $password)
 {
-    try
-    {
+    try {
         $verbinding = new PDO("sqlsrv:server=" . Db::HOST . "; Database=$databaseNaam", $login, $password);
         $verbinding->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } catch (PDOException $fout) {

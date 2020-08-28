@@ -1,6 +1,6 @@
 <?php
 
-declare (strict_types = 1);
+declare(strict_types = 1);
 
 namespace fletnix\data;
 
@@ -20,17 +20,17 @@ function herstelDb(string $passwordRdbmsSuperuser)
         unset($passwordRdbmsSuperuser);
     }
     // TODO: Hardcode geen namen van logins, databases etc. Dit is nu helaas nodig omdat SQL Server driver voor PDO onvoldoende variabelen accepteert.
-    $query = "DROP DATABASE IF EXISTS [AdventureWorks], [" . Db::DATABASE . "];
+    $query = "DROP DATABASE IF EXISTS [MYIMDB], [" . Db::DATABASE . "];
         SET NOCOUNT ON;
-        RESTORE DATABASE [AdventureWorks]
-        FROM DISK = N'/srv/rdbms/AdventureWorks2017.bak'
-        WITH MOVE 'AdventureWorks2017'
-        TO '/var/opt/mssql/data/AdventureWorks2017.mdf',
-        MOVE 'AdventureWorks2017_log'
-        TO '/var/opt/mssql/data/AdventureWorks2017.ldf', REPLACE, RECOVERY, STATS = 10;
-        ALTER DATABASE [AdventureWorks] SET AUTO_UPDATE_STATISTICS_ASYNC OFF
-        ALTER DATABASE [AdventureWorks] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
-        ALTER DATABASE [AdventureWorks] MODIFY NAME = [" . Db::DATABASE . "];";
+        RESTORE DATABASE [MYIMDB]
+        FROM DISK = N'/srv/rdbms/MYIMDB.bak'
+        WITH MOVE 'MYIMDB'
+        TO '/var/opt/mssql/data/MYIMDB.mdf',
+        MOVE 'MYIMDB_log'
+        TO '/var/opt/mssql/data/MYIMDB.ldf', REPLACE, RECOVERY, STATS = 10;
+        ALTER DATABASE [MYIMDB] SET AUTO_UPDATE_STATISTICS_ASYNC OFF
+        ALTER DATABASE [MYIMDB] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+        ALTER DATABASE [MYIMDB] MODIFY NAME = [" . Db::DATABASE . "];";
     try {
         $pdostatement = $verbinding->prepare($query);
         if (!$pdostatement->execute()) {
