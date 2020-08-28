@@ -1,13 +1,11 @@
 <?php
 
-declare (strict_types = 1);
+declare(strict_types = 1);
 
 namespace fletnix\data;
 
 use fletnix\config\Db;
-use function fletnix\data\printPdoError;
 use PDO;
-use PDOException;
 
 require_once __DIR__ . '/../../config/bootstrap.php';
 require_once ROOT_DIR . '/src/data/db_verbinden.php';
@@ -26,14 +24,8 @@ function leesDb()
         unset($password);
     }
     $pdostatement = $verbinding->prepare($query);
-    try {
-        if (!$pdostatement->execute()) {
-            printPdoError($pdostatement);
-            throw new RuntimeException("Uitvoering PDO-statement mislukt. ", 0);
-        }
-    } catch (PDOException $fout) {
-        printPdoError($pdostatement);
-        throw new RuntimeException("Kon PDO-statement niet uitvoeren. ", 0, $fout);
+    if (!$pdostatement->execute()) {
+        throw new RuntimeException("Uitvoering PDO-statement mislukt. ", 0);
     }
     while ($rij = $pdostatement->fetch(PDO::FETCH_LAZY)) {
         $buffer .= htmlentities($rij['Name']);
